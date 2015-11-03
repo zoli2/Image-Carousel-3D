@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set this to the main language of your site -->
+<head>
+    <meta charset="utf-8">
+    
+    <title>Image Carousel</title>
+    
+    <meta name="description" content="An Image Carousel in JavaScript.">
+    <meta name="viewport" width=device-width, content="initial-scale=0.9">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    
+    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+    <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+    
+    <script src="js/raf-polyfill.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
+
+</head>
+<body onload="makeCarousel();">
+	
+	<div id="buttonSection">
+	
+		<input class="carouselButton" type="button" value=" Step Clockwise " onclick="cancelAnimationFrame(carouselOn); carouselOn = false; cancelAnimationFrame(toNext); toNext = requestAnimationFrame(function(){rotateToNext('yes');});">
+		
+		<input class="carouselButton" type="button" value=" Step Back " onclick="cancelAnimationFrame(carouselOn); carouselOn = false; cancelAnimationFrame(toNext); toNext = requestAnimationFrame(function(){rotateToNext('no');});">
+	
+		<input class="carouselButton" type="button" value=" Start / Stop " onclick="cancelAnimationFrame(toNext); toNext = false; rotationToggle();">
+
+	</div>
+
+	<div id="carouselSection" ontouchstart="touchStart(event);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+		
+		<img id="image1" src="images/nrgyDrink.jpeg">
+		
+		<img id="image2" src="images/blueberry.jpeg">
+		<img id="image3" src="images/cherry.jpeg">
+		<img id="image4" src="images/grape.jpeg">
+		
+		<img id="image5" src="images/kiwi.jpeg">
+		<img id="image6" src="images/orange.jpeg">
+		<img id="image7" src="images/peach.jpeg">
+		<img id="image8" src="images/raspberry.jpeg">
+		
+	</div>
+
+	<noscript>
+		<img src="images/noscript.jpeg" style="position: relative; top: -4.5rem; max-width: 100%;">
+	</noscript>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+body 
+{
+	max-width: 1000px;
+	margin: 0 auto;	
+}
+
+#carouselSection
+{
+	position: relative;
+	max-width: 100%;
+	border: 1px solid #333;
+	margin: 0 auto;
+}
+
+#carouselSection img
+{
+	position: absolute;
+	left: -10000px;
+}
+
+#buttonSection
+{
+	width: 100%; 
+	text-align: center; 
+	padding: 25px 0 25px 0;
+}
+
+.carouselButton 
+{
+	color:#333;
+	background-color:#eee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:none;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	font-size:0.8rem;
+	height:2.4rem;
+	padding:0.3rem 0.3rem;
+	margin: 0 0.3rem 0 0.3rem;
+}
+
+
