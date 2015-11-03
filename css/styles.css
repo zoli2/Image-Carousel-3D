@@ -16,7 +16,7 @@ body
 #carouselSection img
 {
 	position: absolute;
-	left: -10000px;
+	left: -10000px; /* Value updated by script. */
 }
 
 #buttonSection
